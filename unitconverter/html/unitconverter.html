@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhetsomvandlare</title>
+    <link rel="stylesheet" href="../css/unitconverter.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+    </style>
+</head>
+<body>
+    <div class="converterMass">
+        <p> <!-- first selection unit -->
+            <select name="i" id="i" autofocus>
+                <option value="from">from</option>
+                <option value="kilo">kilo</option>
+                <option value="hecto">hecto</option>
+                <option value="gram">gram</option>
+                <option value="ounce">ounce</option>
+                <option value="stone">stone</option>
+                <option value="pound">pound</option>
+            </select> 
+
+            <!-- input area -->
+            <input type="number" name="input" id="input" placeholder="Mass" 
+            oninput="converterMass(i.value,o.value)" onChange="converterMass(i.value,o.value)" 
+            style="font-weight: 550; text-align: center;">
+
+            <!-- second selection unit -->
+            <select name="o" id="o">
+                <option value="to">to</option>
+                <option value="kilo">kilo</option>
+                <option value="hecto">hecto</option>
+                <option value="gram">gram</option>
+                <option value="ounce">ounce</option>
+                <option value="stone">stone</option>
+                <option value="pound">pound</option>
+            </select> 
+        </p>
+        
+        <p id="output" style="color:white"></p>
+    </div>
+
+
+    <div class="converterDistance">
+        <p> <!-- first selection unit -->
+            <select name="i2" id="i2">
+                <option value="from">from</option>
+                <option value="meter">meter</option>
+                <option value="mile">mile</option>
+                <option value="yard">yard</option>
+                <option value="foot">foot</option>
+                <option value="inch">inch</option>
+                <option value="nmi">n. mile</option>
+            </select> 
+
+            <!-- input area -->
+            <input type="number" name="input2" id="input2" placeholder="Distance" 
+            oninput="converterDistance(i2.value,o2.value)" onChange="converterDistance(i2.value,o2.value)" 
+            style="font-weight: 550; text-align: center;">
+
+            <!-- second selection unit -->
+            <select name="o2" id="o2">
+                <option value="to">to</option>
+                <option value="meter">meter</option>
+                <option value="mile">mile</option>
+                <option value="yard">yard</option>
+                <option value="foot">foot</option>
+                <option value="inch">inch</option>
+                <option value="nmi">n. mile</option>
+            </select> 
+        </p>
+        
+        <p id="output2" style="color:white"></p>
+    </div>
+
+    <p id="watermark">Maximilian Hallqvist</p>
+
+    <script src="../js/unitconverter.js"></script>
+
+</body>
+</html>
